@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Derivada{
+private:
+    int doublex;
+    int r;
+public:
+    Derivada(int, int);
+    void derivando();
+};
+
+Derivada::Derivada(int _doublex, int _r) {
+   doublex = _doublex;
+   r = _r;
+}
+
+void Derivada::derivando(){
+   double num, pot;
+   cout << "Ingrese numero: " << " ";
+   cin >> num;
+   cout << "Ingrese potencia: " << " ";
+   cin >> pot;
+   double x,y,a;
+   a = pot - 1;
+   //cout << a;
+   y = pow(num,a);
+   //cout << y;
+   x = pot * y;
+   cout << x << " ";
+}
+int main() {
+   Derivada d1 = Derivada(0,0);
+   d1.derivando();
+
+   return 0;
+}
