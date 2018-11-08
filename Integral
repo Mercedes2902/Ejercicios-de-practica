@@ -1,0 +1,46 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+class Integral{
+private:
+    int constante;
+    int exponente;
+    int incognita;
+public:
+    Integral(int,int,int);
+    void integrando();
+};
+
+Integral::Integral(int _cos,int _expo, int _incog){
+    constante = _cos;
+    exponente = _expo;
+    incognita = _incog;
+}
+
+void Integral :: integrando(){
+    double a,b,x;
+    cout << "Ingrese constante: "<< endl;
+    cin >> a;
+    cout << "Ingrese exponente: " << endl;
+    cin >> b;
+    cout << "Ingrese incognita: " << endl;
+    cin >>x;
+    double c,d,e,f;
+    c = b + 1;
+    d = pow(x,c);
+    e = a * d;
+    f = e / c;
+    cout << fixed <<setprecision(3)<< f;
+}
+
+int main() {
+    Integral a1 = Integral(0,0,0);
+    a1.integrando();
+    return 0;
+}
+
