@@ -1,0 +1,45 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class Alumno {
+private:
+    int nota1;
+    int nota2;
+    //double nota3;
+    //double nota4;
+public:
+    Alumno(int,int);
+    void promedio();
+};
+
+Alumno ::Alumno(int _nota1, int _nota2) {
+    nota1 = _nota1;
+    nota2 = _nota2;
+}
+
+void Alumno ::promedio() {
+    double num1, num2, num3, num4;
+    cout << "Ingrese primera nota del alumno 1: "<< endl;
+    cin >> num1;
+    cout << "Ingrese primera nota del alumno 2: "<< endl;
+    cin >> num2;
+    cout << "Ingrese segunda nota del alumno 1: "<< endl;
+    cin >> num3;
+    cout << "Ingrese segunda nota del alumno 2: "<< endl;
+    cin >> num4;
+    double nota1,nota2,nota3,promedio1,promedio2,promediofinal;
+    nota1 = num1 + num2;
+    promedio1 = nota1/2;
+    nota2 = num3 + num4;
+    promedio2 = nota2/2;
+    nota3 = promedio1 + promedio2;
+    promediofinal = nota3/2;
+    cout << fixed << setprecision(2)<<promedio1 << " " << promedio2 << " "<< promediofinal;
+}
+
+
+int main() {
+    Alumno a1 = Alumno(0,0);
+    a1.promedio();
+}
